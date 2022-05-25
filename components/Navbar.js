@@ -2,6 +2,7 @@ import React from 'react'
 import Link from 'next/Link'
 import { AiFillCloseCircle, AiFillMinusCircle, AiFillPlusCircle } from 'react-icons/ai';
 import { BsFillBagCheckFill, BsFillCartCheckFill } from 'react-icons/bs';
+import { MdAccountCircle,  } from 'react-icons/md';
 import { useRef } from 'react';
 import Image from 'next/image'
 
@@ -20,7 +21,7 @@ const Navbar = ( {cart, addToCart, removeFromCart, clearCart, subTotal}) => {
   const ref = useRef()
   return (
 
-    <div className="flex flex-col sticky top-0 z-10 md:flex-row md:justify-start justify-center items-center py-2 shadow-md  bg-white">
+    <div className="flex flex-col sticky top-0 z-10 md:flex-row md:justify-start items-center py-2 shadow-md  bg-white">
       <div className="logo mx-5">
         <Link href='/'><a className="flex title-font font-medium items-center text-purple-800 mb-4 md:mb-0">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-10 h-10 text-white p-2 bg-purple-800 rounded-full" viewBox="0 0 24 24">
@@ -38,10 +39,15 @@ const Navbar = ( {cart, addToCart, removeFromCart, clearCart, subTotal}) => {
           <Link href='/hoodies'><a className="mr-5 hover:text-purple-500  font-bold">Hoodies</a></Link>
         </nav>
       </div>
-
-      <div onClick={toggleCart} className=" cart absolute cursor-pointer mx-5 focus:outline-none hover:bg-gray-200  right-0  ">
-        <BsFillCartCheckFill className='font-bold text-2xl mt-2 text-purple-800' />
+      <Link href='/login'>
+      <div  className=" cart absolute cursor-pointer   focus:outline-none hover:bg-gray-200 md:mx-5 md:mt-0 md:right-6 right-2">
+        <MdAccountCircle className='font-bold text-2xl mt-2  text-purple-800' />
       </div>
+      </Link>
+      <div onClick={toggleCart} className=" cart absolute cursor-pointer  focus:outline-none hover:bg-gray-200 md:mt-0 mt-8 md:right-3 right-2">
+        <BsFillCartCheckFill className='font-bold text-2xl mt-2  text-purple-800' />
+      </div>
+
 
       <div ref={ref} className="h-[100vh] sidebar absolute top-0 right-0 bg-purple-300 p-10 hidden ">
         <span onClick={toggleCart} className='absolute top-5 right-5 text-2xl cursor-pointer text-purple-800'><AiFillCloseCircle /></span>
