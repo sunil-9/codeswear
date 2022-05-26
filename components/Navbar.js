@@ -56,7 +56,7 @@ const Navbar = ( {cart, addToCart, removeFromCart, clearCart, subTotal}) => {
           {(Object.keys(cart).length ==0 && Object.keys(cart)!=null) && <div className='mt-2 flex justify-center'>The Cart is Empty!</div>}
         
        { Object.keys(cart).map((k)=>{ 
-         console.log(cart[k].itemCode,1,cart[k].price,cart[k].name,cart[k].size,cart[k].variant,cart[k].imgUrl)
+        //  console.log(cart[k].itemCode,1,cart[k].price,cart[k].name,cart[k].size,cart[k].variant,cart[k].imgUrl)
         return <li key={k}>
          
             <div className="item flex my-5">
