@@ -66,6 +66,7 @@ const Navbar = ( {cart, addToCart, removeFromCart, clearCart, subTotal}) => {
                 <span className='mx-2 text-sm'>{cart[k].qty}</span><AiFillPlusCircle onClick={()=>{addToCart(cart[k].itemCode,1,cart[k].price,cart[k].name,cart[k].size,cart[k].variant,cart[k].imgUrl)}} className='cursor-pointer text-purple-800' />
               </div>
             </div>
+            { console.log(cart[k].imgUrl)}
               <div className="font-semibold"> <Image alt='\' src={cart[k].imgUrl} height={100} width={100} /> </div>
           </li>
        }) }

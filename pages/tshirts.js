@@ -17,8 +17,8 @@ const Tshirts = ({ products }) => {
               <div className="mt-4 text-center ">
                 <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">{products[p].category}</h3>
                 <h2 className="text-gray-900 title-font text-lg font-medium">{products[p].title}</h2>
-                <p className="mt-1 line-through">{parseInt(products[p].price) + 100}</p>
-                <p className="mt-1">{products[p].price}</p>
+                <p className="mt-1 line-through">रु {parseInt(products[p].price) + 100}</p>
+                <p className="mt-1">रु {products[p].price}</p>
                 <div className="mt-1">
                   {products[p].size.includes('S') && <span className='border border-gray-300 px-1 mx-1'>S</span>}
                   {products[p].size.includes('M') && <span className='border border-gray-300 px-1 mx-1'>M</span>}

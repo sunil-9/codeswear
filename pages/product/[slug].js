@@ -3,13 +3,14 @@ import Image from 'next/image'
 import { useState } from 'react'
 import mongoose from 'mongoose'
 import Product from '../../models/product'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
-const Post = ({cart, addToCart, removeFromCart, clearCart, subTotal,product, variants}) => {
+const Post = ({buyNow,cart, addToCart, removeFromCart, clearCart, subTotal,product, variants}) => {
   // console.log("product is ")
   // console.log( product)
   // console.log("variants is "+ variants)
   // console.log("default size is "+ product.size+ " default color is "+ product.color)
-
   // console.log( variants)
   const router = useRouter()
   const {slug} = router.query
@@ -18,12 +19,31 @@ const Post = ({cart, addToCart, removeFromCart, clearCart, subTotal,product, var
   const checkService = async()=>{
     let pins = await fetch('http://localhost:3000/api/pincode')
     let pinjson = await pins.json()
-    console.log(pin)
+    // console.log(pin)
+      
     if(pinjson.includes(parseInt(pin))){
+      toast.success('Wow service available in your area!', {
+        position: "bottom-center",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        });
       // service = true
       setService(true)
       
     }else{
+      toast.error('Sorry! Service is not available in your locality.', {
+        position: "bottom-center",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        });
       setService(false)
       // service = false
 
@@ -32,25 +52,25 @@ const Post = ({cart, addToCart, removeFromCart, clearCart, subTotal,product, var
   const onChangePin =(e)=>{
     setPin(e.target.value)
   }
-  const [imgUrl, setImgUrl] = useState('/tshirts/four.jpg')
+
   const [size, setSize] = useState(product.size)
   const [color, setColor] = useState(product.color)
   const refreshVariant =(newsize, newcolor)=>{
     let url =`http://localhost:3000/product/${variants[newcolor][newsize]['slug']}`
     window.location= url
   }
-  // setImgUrl('/tshirts/four.jpg')
-  // const imgUrl="/tshirts/four.jpg";
+
+  
 
 
   return <>
     <section className="text-gray-600 body-font overflow-hidden">
       <div className="container px-5 py-10 justify-center">
         <div className="lg:w-4/5 mx-auto flex flex-wrap">
-          <Image alt="ecommerce" className="lg:w-1/2 w-full lg:h-auto h-64 mx-10 object-cover object-center rounded" src={imgUrl} height={400} width={400} />
+          <Image alt="ecommerce" className="lg:w-1/2 w-full lg:h-auto h-64 mx-10 object-cover object-center rounded" src={product.img} height={400} width={400} />
           <div className="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-            <h2 className="text-sm title-font text-gray-500 tracking-widest">BRAND NAME</h2>
-            <h1 className="text-gray-900 text-3xl title-font font-medium mb-1">The Catcher in the Rye</h1>
+            <h2 className="text-sm title-font text-gray-500 tracking-widest">{product.category}</h2>
+            <h1 className="text-gray-900 text-3xl title-font font-medium mb-1">{product.title}</h1>
             <div className="flex mb-4">
               <span className="flex items-center">
                 <svg fill="currentColor" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 text-purple-500" viewBox="0 0 24 24">
@@ -88,7 +108,7 @@ const Post = ({cart, addToCart, removeFromCart, clearCart, subTotal,product, var
                 </a>
               </span>
             </div>
-            <p className="leading-relaxed">Fam locavore kickstarter distillery. Mixtape chillwave tumeric sriracha taximy chia microdosing tilde DIY. XOXO fam indxgo juiceramps cornhole raw denim forage brooklyn. Everyday carry +1 seitan poutine tumeric. Gastropub blue bottle austin listicle pour-over, neutra jean shorts keytar banjo tattooed umami cardigan.</p>
+            <p className="leading-relaxed">{product.desc}</p>
             <div className="flex mt-6 items-center pb-5 border-b-2 border-gray-100 mb-5">
               <div className="flex">
                 <span className="mr-3">Color</span>
@@ -126,9 +146,10 @@ const Post = ({cart, addToCart, removeFromCart, clearCart, subTotal,product, var
               </div>
             </div>
             <div className="flex">
-              <span className="title-font font-medium text-2xl text-gray-900">$58.00</span>
-              {/* <button className="flex ml-auto text-white bg-purple-500 border-0 py-2 px-6 focus:outline-none $(color ==='red'? 'border-black' : 'border-gray-300) hover:bg-purple-600 rounded">Check Out</button> */}
-              <button onClick={() =>{addToCart(slug ,1,499,'wear-the-code','xl','black',imgUrl)} } className="flex ml-auto text-white bg-purple-500 border-0 py-2 px-6 focus:outline-none $(color ==='red'? 'border-black' : 'border-gray-300) hover:bg-purple-600 rounded">Add to cart</button>
+              <span className="title-font font-medium text-2xl text-gray-900">रु {product.price}</span>
+             
+              <button onClick={() =>{buyNow(slug ,1,product.price,product.title,size,color,product.img)} } className="flex ml-auto text-white bg-purple-500 border-0 py-2 px-6 focus:outline-none $(color ==='red'? 'border-black' : 'border-gray-300) hover:bg-purple-600 rounded">Buy Now</button>
+              <button onClick={() =>{addToCart(slug,1,product.price,product.title,size,color,product.img)} } className="flex ml-3 text-white bg-purple-500 border-0 py-2 px-6 focus:outline-none $(color ==='red'? 'border-black' : 'border-gray-300) hover:bg-purple-600 rounded">Add to cart</button>
             </div>
             <div className="flex mt-5">
               <h2 className="text-left underline">Check service area with your pin code below:</h2>
@@ -137,10 +158,11 @@ const Post = ({cart, addToCart, removeFromCart, clearCart, subTotal,product, var
               <input onChange={onChangePin} type="number" placeholder='Enter pincode' className='pl-2 border-2' required />
               <button onClick={checkService} className="flex ml-auto text-white bg-purple-500 border-0 py-2 px-6 focus:outline-none $(color ==='red'? 'border-black' : 'border-gray-300) hover:bg-purple-600 rounded">Check</button>
             </div>
+            <ToastContainer />
             {(!service && service != null) && <div className="flex mt-5">
               <h2 className="text-left underline text-red-500">Sorry! Service is not available in your locality</h2>
             </div>}
-            {(service && service != null) && <div className="flex mt-5">
+            {(service && service != null) &&  <div className="flex mt-5">
               <h2 className="text-left underline text-green-500">Yeh! service available in your area.</h2>
             </div>}
           </div>
@@ -154,7 +176,7 @@ export async function getServerSideProps(context) {
     await mongoose.connect(process.env.MONGO_URI)
   }
   let product = await Product.findOne({ slug: context.query.slug })
-  let variants = await Product.find({ title: product.title })
+  let variants = await Product.find({ title: product.title, category:product.category })
   let colorSizeSlug ={} 
   for (let item of variants) {
       if (Object.keys(colorSizeSlug).includes(item.color)){
