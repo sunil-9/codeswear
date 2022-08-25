@@ -1,0 +1,217 @@
+[{
+  "_id": {
+    "$oid": "628dd58b7efc75cea743a9fb"
+  },
+  "title": "wear the code",
+  "slug": "slug-2",
+  "desc": " desc",
+  "img": "https://rukminim1.flixcart.com/image/832/832/kq18n0w0/t-shirt/s/h/w/s-fyt-try-this-original-imag44wmgzz5rg2j.jpeg",
+  "category": "tshirt",
+  "size": "M",
+  "color": "red",
+  "price": "499",
+  "availableQty": "1",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1653462411566"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1653462465501"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "628dd58b7efc75cea743a9fe"
+  },
+  "title": "wear the code 1",
+  "slug": "new-slug-1-1",
+  "desc": " desc",
+  "img": "https://rukminim1.flixcart.com/image/832/832/kyxb9u80/t-shirt/k/n/y/xl-t67-nbwh-eyebogler-original-imagbfyc3rkzaj2y.jpeg",
+  "category": "tshirt",
+  "size": "M",
+  "color": "red",
+  "price": "599",
+  "availableQty": "1",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1653462411575"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1653462465521"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "628df5619b41653a9fbb15a4"
+  },
+  "title": "viral trend printed women round neck",
+  "slug": "viral-trend-printed-women-round-neck",
+  "desc": " desc",
+  "img": "https://rukminim1.flixcart.com/image/832/832/knunf680/t-shirt/r/x/t/xl-crp-nvr-viral-trend-original-imag2gy8zyqz8mh3.jpeg",
+  "category": "tshirt",
+  "size": "L",
+  "color": "green",
+  "price": "499",
+  "availableQty": "1",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1653470561525"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1653470561525"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "628df5619b41653a9fbb15a7"
+  },
+  "title": "young solid women round neck black pink",
+  "slug": "young-trendz-solid-women-round-neck-black-pink",
+  "desc": " desc",
+  "img": "https://rukminim1.flixcart.com/image/832/832/kcc9q4w0/t-shirt/s/z/q/s-2co-w-regular-must-blk-young-trendz-original-imafthf9brdq8cfj.jpeg",
+  "category": "tshirt",
+  "size": "M",
+  "color": "pink",
+  "price": "499",
+  "availableQty": "1",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1653470561535"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1653470561535"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "628dfb8e9b41653a9fbb15e6"
+  },
+  "title": "young solid women round neck black pink",
+  "slug": "young-trendz-solid-women-round-neck-black-pink-small",
+  "desc": " desc",
+  "img": "https://rukminim1.flixcart.com/image/832/832/knunf680/t-shirt/r/x/t/xl-crp-nvr-viral-trend-original-imag2gy8zyqz8mh3.jpeg",
+  "category": "tshirt",
+  "size": "S",
+  "color": "green",
+  "price": "499",
+  "availableQty": "1",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1653472142593"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1653472142593"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "628f28ccbc504e414ee10f2e"
+  },
+  "title": "young solid women round neck black pink",
+  "slug": "young-trendz-solid-women-round-neck-black-pink-4",
+  "desc": " desc",
+  "img": "https://rukminim1.flixcart.com/image/832/832/knunf680/t-shirt/r/x/t/xl-crp-nvr-viral-trend-original-imag2gy8zyqz8mh3.jpeg",
+  "category": "tshirt",
+  "size": "XL",
+  "color": "red",
+  "price": "499",
+  "availableQty": "1",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1653549260398"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1653549260398"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "628f28ccbc504e414ee10f31"
+  },
+  "title": "young solid women round neck black pink",
+  "slug": "young-trendz-solid-women-round-neck-black-pink-90",
+  "desc": " desc",
+  "img": "https://rukminim1.flixcart.com/image/832/832/kcc9q4w0/t-shirt/s/z/q/s-2co-w-regular-must-blk-young-trendz-original-imafthf9brdq8cfj.jpeg",
+  "category": "tshirt",
+  "size": "M",
+  "color": "pink",
+  "price": "499",
+  "availableQty": "1",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1653549260417"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1653549260417"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "628f2c3abc504e414ee10f57"
+  },
+  "title": "young solid women round neck black pink",
+  "slug": "young-trendz-solid-women-round-neck-black-pink-4aa",
+  "desc": " desc",
+  "img": "https://rukminim1.flixcart.com/image/832/832/knunf680/t-shirt/r/x/t/xl-crp-nvr-viral-trend-original-imag2gy8zyqz8mh3.jpeg",
+  "category": "tshirt",
+  "size": "XL",
+  "color": "pink",
+  "price": "499",
+  "availableQty": "1",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1653550138679"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1653550138679"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "628f2c3abc504e414ee10f5a"
+  },
+  "title": "young solid women round neck black pink",
+  "slug": "young-trendz-solid-women-round-neck-black-pink-900-a",
+  "desc": " desc",
+  "img": "https://rukminim1.flixcart.com/image/832/832/kcc9q4w0/t-shirt/s/z/q/s-2co-w-regular-must-blk-young-trendz-original-imafthf9brdq8cfj.jpeg",
+  "category": "tshirt",
+  "size": "S",
+  "color": "pink",
+  "price": "499",
+  "availableQty": "1",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1653550138684"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1653550138684"
+    }
+  },
+  "__v": 0
+}]

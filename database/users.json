@@ -1,0 +1,55 @@
+[{
+  "_id": {
+    "$oid": "629110f1e93cf2e43f980449"
+  },
+  "name": "sunil sapkota",
+  "email": "sunilsapkota9@gmail.com",
+  "password": "1",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1653674225713"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1653674225713"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62911109e93cf2e43f98044d"
+  },
+  "name": "romeo",
+  "email": "romeo@gmail.com",
+  "password": "desc",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1653674249672"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1653674249672"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62911333e93cf2e43f980470"
+  },
+  "name": "sunil sapkota",
+  "email": "sunilsapkota9@gmail.com111111",
+  "password": "12121212",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1653674803462"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1653674803462"
+    }
+  },
+  "__v": 0
+}]
