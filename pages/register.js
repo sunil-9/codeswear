@@ -1,5 +1,5 @@
 import React from 'react'
-import Link from 'next/link'
+import Link from 'next/Link'
 import { useState } from 'react'
 
 import { ToastContainer, toast } from 'react-toastify';
